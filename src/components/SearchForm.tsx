@@ -1,19 +1,25 @@
 import { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Form } from "react-router-dom";
 
 function SearchForm() {
-  const [term, setTerm] = useState("");
-  const navigate = useNavigate();
+  //   const [term, setTerm] = useState("");
+  //   const navigate = useNavigate();
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    navigate(`/search?term=${term}`);
-  }
+  //   function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  //     event.preventDefault();
+  //     navigate(`/search?term=${term}`);
+  //   }
+
+  //   return (
+  //     <form onSubmit={handleSubmit}>
+  //       <input value={term} onChange={(e) => setTerm(e.target.value)} />
+  //     </form>
+  //   );
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input value={term} onChange={(e) => setTerm(e.target.value)} />
-    </form>
+    <Form action="/search">
+      <input name="term" />
+    </Form>
   );
 }
 
