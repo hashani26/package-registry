@@ -1,5 +1,5 @@
-import { FormEvent, useState } from "react";
-import { useNavigate, Form } from "react-router-dom";
+import { Form } from "react-router-dom";
+import { VscSearch } from "react-icons/vsc";
 
 function SearchForm() {
   //   const [term, setTerm] = useState("");
@@ -17,8 +17,17 @@ function SearchForm() {
   //   );
 
   return (
-    <Form action="/search">
-      <input name="term" />
+    <Form action="/search" className="flex items-center">
+      <div className="relative">
+        <div className="absolute inset-y-0 flex items-center pl-3">
+          <VscSearch className="h-5 w-5 text-gray-500" />
+        </div>
+        <input
+          name="term"
+          className="pl-10 py-2 w-full border-0 shadow-none"
+          placeholder="Search packages"
+        />
+      </div>
     </Form>
   );
 }
