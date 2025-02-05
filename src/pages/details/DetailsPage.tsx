@@ -1,4 +1,4 @@
-import type { DetailsLoaderResult } from "./DetailsLoader";
+import type { DetailsLoaderResult } from "./detailsLoader";
 import { useLoaderData } from "react-router-dom";
 
 function DetailsPage() {
