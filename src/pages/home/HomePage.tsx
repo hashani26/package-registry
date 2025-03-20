@@ -35,7 +35,7 @@ function HomePage() {
           The package manager for javascript Search and view packages
         </p>
       </div>
-      <div className="mx-auto grid grid-cols-4 max-w-[900px] items-stretch gap-4">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-4 max-w-[900px] items-stretch gap-4">
         {renderedPackages}
       </div>
     </div>
