@@ -17,11 +17,11 @@ function PackageListItem({ pack }: PackageListItemProps) {
     );
   });
   return (
-    <div className="border p-4 rounded flex justify-between items-center">
-      <div className="flex flex-col gap-2">
+    <div className="border p-4 rounded flex justify-between items-center flex-col lg:flex-row">
+      <div className="flex flex-col gap-2 mb-5 lg:mb-0">
         <Link to={`/packages/${pack.name}`}>{pack.name}</Link>
         <p className="text-sm text-gray-500">{pack.description}</p>
-        <div className="flex gap-1">{renderedKeywords}</div>
+        <div className="flex gap-1 flex-wrap">{renderedKeywords}</div>
       </div>
       <div>
         <Link
